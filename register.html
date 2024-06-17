@@ -1,0 +1,73 @@
+<html>
+<head>
+<title> my first form</title>
+<style>
+body 
+{
+text-align:center;
+     background-color: skyblue;
+     color:black;
+     
+}
+</style>
+</head>
+<body>
+<center> <u><h1>REGESTRATION FORM</h1></u></center>
+<form  action="librarydb.php" method="post" onsubmit="return validate()">
+<label>NAME :</label>
+<input type="text" name="name" id="name">
+<br>
+<br>
+<label>REGISTRATION NUMBER :</label>
+<input type="text" name="reg" id="reg">
+<br>
+<br>
+<label>USER NAME :</label>
+<input type="user name" name="user_name" id="user_name">
+<br>
+<br>
+<label>PASSWORD :</label>
+<input type="password" name="pw" id="pw">
+<br>
+<br>
+
+<label>GENDER :</label>
+<input type="radio" value="male" name="gender" id="gender" >MALE
+<input type="radio" value="female" name="gender" id="gender">FEMALE
+<br>
+<br>
+<label> DEPARTMENT :</label>
+<select name="dept" id="dept">
+<option value="null" selected>select</option>
+<option value="cse">CSE</option>
+<option value="ece">ECE</option>
+<option value="it">IT</option>
+</select>
+<br>
+<br>
+<label>YEAR :</label>
+<select name="Year" id="year">
+<option value="null" selected>choose</option>
+<option value="1">1st year</option>
+<option value="2">2nd year</option>
+<option value="3">3rd year</option>
+<option value="4">4th year</option>
+</select>
+<br>
+<br>
+<input type="submit" value="Submit">
+</form>
+<script>
+function validate()
+{
+var a=document.getElementById("pw").value;
+var b=document.getElementById("pd").value;
+if(a!=b){
+alert("invalid password");
+event.preventDefault();
+return false;
+}
+}
+</script>
+</body>
+</html>
